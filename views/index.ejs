@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+  Usuarios...
+
+  <ul class="usuarios">
+  <% for(var i=0; i<usuarios.length; i++) {%>
+    <li class="usuario">
+      <span><%= usuarios[i].nombre %></span>
+      <span><%= usuarios[i].apellidos %></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <form action="/usuarios" method="POST">
+    <input type="text" placeholder="nombre" name="nombre">
+    <input type="text" placeholder="apellidos" name="apellidos">
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
